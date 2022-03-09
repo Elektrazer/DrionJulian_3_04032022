@@ -21,3 +21,32 @@
       color: inherit;
     }
   }
+
+  @mixin ol {
+    width: 300px;
+    margin: 20px 0px;
+    padding: 6px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
+  }
+
+  @mixin homecard {
+    width: 90%;
+    height: 300px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
+  }
+
+  @mixin footer {
+    width: 100%;
+    background-color: #354146;
+    height: 200px;
+  }
