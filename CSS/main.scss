@@ -1,1 +1,97 @@
+/* Variables */
 @import "../sass/utils/variables";
+@import "../sass/utils/mixins";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.headerhome {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px black;
+    border: 1px outset grey;
+
+    #Logo {
+        height: 15%;
+        width: 50%;
+        padding-bottom: 5px;
+        
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.topsection--location {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8DFE3;
+
+    
+        i {
+            height: 19px;
+            width: 19px;
+        }
+        span {
+            margin-left: 5px;
+            color: black;
+        }
+}
+
+.topsection--description {
+    background-color: #fafafa;
+    text-align: center;
+    padding: 2rem;
+
+        .description__title {
+            margin: 0;
+        }
+        .description__subtitle {
+            font-weight: 300;
+            margin: 1.5rem 0;
+        }
+        .button {
+            @include button;
+        }
+}
+
+.order-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+.container {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .card {
+        height: 250px;
+        width: 90%;
+        margin-bottom: 40px;
+        &__header {
+            height: 70%;
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__body {
+            height: 30%;
+            background-color: white;
+        }
+    }
+}
+
