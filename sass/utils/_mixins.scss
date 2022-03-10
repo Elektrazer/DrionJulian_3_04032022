@@ -1,9 +1,40 @@
+@mixin homepage {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px black;
+
+    #Logo {
+        height: 15%;
+        width: 50%;
+        padding-bottom: 5px;
+        
+        
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .previous {
+        position: absolute;
+        left: 15px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #000;
+        i {
+            display: none;
+        }
+    }
+}
+
 @mixin button {
     border: 0;
     padding: 0.75rem 1.5rem;
+    width: fit-content;
     font-weight: 500;
     font-size: 1.1rem;
     border-radius: 100px;
+    margin: 25px auto;
     color: white;
     background-color: rgb(104, 104, 104);
     background-image: linear-gradient($pink, $purple);
@@ -20,9 +51,9 @@
       text-decoration: none;
       color: inherit;
     }
-  }
+}
 
-  @mixin ol {
+@mixin ol {
     width: 300px;
     margin: 20px 0px;
     padding: 6px 0px;
@@ -31,9 +62,9 @@
     align-items: center;
     border-radius: 15px;
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
-  }
+}
 
-  @mixin homecard {
+@mixin homecard {
     width: 90%;
     height: 300px;
     margin: 15px 0px;
@@ -43,10 +74,204 @@
     justify-content: center;
     border-radius: 15px;
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
-  }
+}
 
-  @mixin footer {
+@mixin footer {
     width: 100%;
     background-color: #354146;
     height: 200px;
+    .container-title {
+      width: 100%;
+      padding: 5px 0 0 20px;
+      h3 {
+          font-family: 'Shrikhand', sans-serif;
+          color: #FFF;
+      }
+    }
+    img {
+      padding-top: 15px;
+      color: white;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 20px;
+        li {
+            padding: 5px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+  /* Alt Pages */
+@mixin altheader {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px black;
+
+    #Logo {
+      height: 15%;
+      width: 50%;
+      padding-bottom: 5px;
+        
+        
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .previous {
+        position: absolute;
+        left: 15px;
+        font-size: 30px;
+        text-decoration: none;
+        color: #000;
+        i {
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+}
+
+@mixin Foodmenu {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 15px 15px 0% 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+    background-color: #e5e5e5;
+    border-radius: 15px 15px 0px 0px;
+}
+
+@mixin headermenu {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      h2 {
+        font-family: Shrikhand;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__jaime {
+      height: 100%;
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .empty {
+        height: 25px;
+        width: 25px;
+        position: relative;
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .full {
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+      }
+    }
+}
+
+@mixin plats {
+  height: fit-content;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+
+  &__titre {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
   }
+
+  &__cards {
+    height: 80px;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+
+    .cards__desc {
+      width: 70%;
+      padding: 0px 5%;
+      transform-origin: left;
+
+      h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      h5 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-weight: 100;
+      }
+    }
+  }
+}
+@mixin footer2 {
+  width: 100%;
+  background-color: #354146;
+  height: 200px;
+  position: relative;
+  top: 150px;
+  .container-title {
+    width: 100%;
+    padding: 5px 0 0 20px;
+    h3 {
+        font-family: 'Shrikhand', sans-serif;
+        color: #FFF;
+    }
+  }
+  img {
+    padding-top: 15px;
+    color: white;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: 20px;
+      li {
+          padding: 5px;
+      }
+  }
+  a {
+      text-decoration: none;
+      color: white;
+  }
+}

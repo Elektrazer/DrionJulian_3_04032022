@@ -6,23 +6,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-.headerhome {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 1px black;
 
-    #Logo {
-        height: 15%;
-        width: 50%;
-        padding-bottom: 5px;
-        
-        
-        img {
-            height: 100%;
-            width: 100%;
-        }
-    }
+.headerhome {
+    @include homepage;
 }
 
 .topsection--location {
@@ -153,29 +139,48 @@ body {
 
 footer {
     @include footer;
-        .container-title {
-            width: 100%;
-            padding: 5px 0 0 20px;
-            h3 {
-                font-family: 'Shrikhand', sans-serif;
-                color: #FFF;
-            }
-        }
+}
+
+/* Page 2*/
+
+.headeralt {
+    @include altheader;
+}
+
+.Foodcontainers {
+    height: fit-content;
+    width: 100%;
+    top: 80px;
+
+    .restaurant_photo {
+        height: 180px;
+        width: 100%;
+        position: absolute;
+        transform-origin: bottom;
         img {
-            padding-top: 15px;
-            color: white;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding-left: 20px;
-            li {
-                padding: 5px;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: white;
+    }
+    .Foodmenu {
+        @include Foodmenu;
+
+        .header_menu {
+            @include headermenu;
         }
         
+        .plats {
+            @include plats;
+        }
+        .button {
+            @include button;
+        }
+
+    }
+
+}
+
+.altfooter {
+    @include footer2;
 }

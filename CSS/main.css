@@ -1,4 +1,5 @@
 /* Variables */
+/* Alt Pages */
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -25,6 +26,18 @@ body {
 .headerhome #Logo img {
   height: 100%;
   width: 100%;
+}
+
+.headerhome .previous {
+  position: absolute;
+  left: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+.headerhome .previous i {
+  display: none;
 }
 
 .topsection--location {
@@ -72,9 +85,13 @@ body {
 .topsection--description .button {
   border: 0;
   padding: 0.75rem 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
+  margin: 25px auto;
   color: white;
   background-color: #686868;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -295,6 +312,291 @@ footer ul li {
 }
 
 footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Page 2*/
+.headeralt {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 1px black;
+          box-shadow: 0 1px black;
+}
+
+.headeralt #Logo {
+  height: 15%;
+  width: 50%;
+  padding-bottom: 5px;
+}
+
+.headeralt #Logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.headeralt #Logo .previous {
+  position: absolute;
+  left: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+.headeralt #Logo .previous i {
+  height: 100%;
+  display: block;
+}
+
+.Foodcontainers {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  top: 80px;
+}
+
+.Foodcontainers .restaurant_photo {
+  height: 180px;
+  width: 100%;
+  position: absolute;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.Foodcontainers .restaurant_photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Foodcontainers .Foodmenu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 15px 15px 0% 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 150px;
+  background-color: #e5e5e5;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.Foodcontainers .Foodmenu .header_menu {
+  height: 50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Foodcontainers .Foodmenu .header_menu__title {
+  height: 100%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Foodcontainers .Foodmenu .header_menu__title h2 {
+  font-family: Shrikhand;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Foodcontainers .Foodmenu .header_menu__jaime {
+  height: 100%;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Foodcontainers .Foodmenu .header_menu__jaime .empty {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
+
+.Foodcontainers .Foodmenu .header_menu__jaime .full {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+
+.Foodcontainers .Foodmenu .plats {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Foodcontainers .Foodmenu .plats__titre {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Foodcontainers .Foodmenu .plats__cards {
+  height: 80px;
+  width: 100%;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.Foodcontainers .Foodmenu .plats__cards .cards__desc {
+  width: 70%;
+  padding: 0px 5%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.Foodcontainers .Foodmenu .plats__cards .cards__desc h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-weight: 400;
+}
+
+.Foodcontainers .Foodmenu .plats__cards .cards__desc h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-weight: 100;
+}
+
+.Foodcontainers .Foodmenu .button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  margin: 25px auto;
+  color: white;
+  background-color: #686868;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.Foodcontainers .Foodmenu .button:hover {
+  background-color: white;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.Foodcontainers .Foodmenu .button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.altfooter {
+  width: 100%;
+  background-color: #354146;
+  height: 200px;
+  position: relative;
+  top: 150px;
+}
+
+.altfooter .container-title {
+  width: 100%;
+  padding: 5px 0 0 20px;
+}
+
+.altfooter .container-title h3 {
+  font-family: 'Shrikhand', sans-serif;
+  color: #FFF;
+}
+
+.altfooter img {
+  padding-top: 15px;
+  color: white;
+}
+
+.altfooter ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.altfooter ul li {
+  padding: 5px;
+}
+
+.altfooter a {
   text-decoration: none;
   color: white;
 }
