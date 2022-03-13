@@ -509,7 +509,7 @@ footer a {
 }
 
 .Foodcontainers .Foodmenu .plats__cards .cards__desc {
-  width: 70%;
+  width: 79%;
   padding: 0px 5%;
   -webkit-transform-origin: left;
           transform-origin: left;
@@ -521,6 +521,7 @@ footer a {
   text-overflow: ellipsis;
   margin: 0;
   font-weight: 400;
+  font-size: 18px;
 }
 
 .Foodcontainers .Foodmenu .plats__cards .cards__desc h5 {
@@ -529,6 +530,7 @@ footer a {
   text-overflow: ellipsis;
   margin: 0;
   font-weight: 100;
+  font-size: 15px;
 }
 
 .Foodcontainers .Foodmenu .button {

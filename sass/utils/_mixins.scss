@@ -222,7 +222,7 @@
     border-radius: 15px;
 
     .cards__desc {
-      width: 70%;
+      width: 79%;
       padding: 0px 5%;
       transform-origin: left;
 
@@ -232,6 +232,7 @@
         text-overflow: ellipsis;
         margin: 0;
         font-weight: 400;
+        font-size: 18px;
       }
 
       h5 {
@@ -240,6 +241,7 @@
         text-overflow: ellipsis;
         margin: 0;
         font-weight: 100;
+        font-size: 15px;
       }
     }
   }
