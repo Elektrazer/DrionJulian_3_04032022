@@ -1,12 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 /* Variables */
 /* Alt Pages */
+@-webkit-keyframes loadingspin {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  1% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(999999px);
+            transform: translateX(999999px);
+  }
+}
+@keyframes loadingspin {
+  0% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  1% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(999999px);
+            transform: translateX(999999px);
+  }
+}
+
 html {
   font-family: 'Roboto' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
   margin: 0;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99999;
+  background-color: transparent;
+  position: fixed;
+  pointer-events: none;
+}
+
+.loadingspin {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: loadingspin 3s;
+          animation: loadingspin 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.loadingspin div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #9356DC;
+  border-radius: 50%;
+  -webkit-animation: loadingspin 1.2s cubic-bezier(0.5, 0, 0.5, 1);
+          animation: loadingspin 1.2s cubic-bezier(0.5, 0, 0.5, 1);
+  border-color: #9356DC transparent transparent transparent;
+}
+
+.loadingspin div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.loadingspin div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.loadingspin div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
 }
 
 .headerhome {
@@ -266,7 +362,7 @@ body {
           justify-content: center;
 }
 
-.container .card__body a .card__text h3 {
+.container .card__body a .card__text h4 {
   margin: 0px;
   padding: 0px;
   font-family: Roboto;
@@ -275,7 +371,7 @@ body {
   color: #000;
 }
 
-.container .card__body a .card__text h4 {
+.container .card__body a .card__text p {
   margin: 0px;
   padding: 0px;
   font-family: Roboto;
@@ -494,6 +590,16 @@ footer a {
           flex-direction: column;
 }
 
+.Foodcontainers .Foodmenu .plats__titre h4 {
+  margin-bottom: 2px;
+}
+
+.Foodcontainers .Foodmenu .plats__titre div {
+  height: 3px;
+  width: 75%;
+  background-color: #99e2d0;
+}
+
 .Foodcontainers .Foodmenu .plats__cards {
   height: 80px;
   width: 100%;
@@ -519,7 +625,7 @@ footer a {
           transform-origin: left;
 }
 
-.Foodcontainers .Foodmenu .plats__cards .cards__desc h3 {
+.Foodcontainers .Foodmenu .plats__cards .cards__desc h4 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -528,7 +634,7 @@ footer a {
   font-size: 18px;
 }
 
-.Foodcontainers .Foodmenu .plats__cards .cards__desc h5 {
+.Foodcontainers .Foodmenu .plats__cards .cards__desc p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

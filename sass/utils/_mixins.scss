@@ -1,3 +1,10 @@
+@mixin loadingspin {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
 @mixin homepage {
     padding-top: 10px;
     display: flex;
@@ -209,6 +216,14 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
+    h4 {
+      margin-bottom: 2px;
+    }
+    div {
+      height: 3px;
+      width: 75%;
+      background-color: #99e2d0;
+    }
   }
 
   &__cards {
@@ -226,7 +241,7 @@
       padding: 0px 5%;
       transform-origin: left;
 
-      h3 {
+      h4 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -235,7 +250,7 @@
         font-size: 18px;
       }
 
-      h5 {
+      p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
