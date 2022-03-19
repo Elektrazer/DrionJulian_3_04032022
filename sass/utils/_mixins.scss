@@ -235,6 +235,8 @@
     align-items: center;
     background-color: #fff;
     border-radius: 15px;
+    animation-duration: 3s;
+    animation-name: slide-in;
 
     .cards__desc {
       width: 79%;
@@ -258,6 +260,19 @@
         font-weight: 100;
         font-size: 15px;
       }
+    }
+    .check {
+      background-color: #99E2D0;
+      color: white;
+      width: 80px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 15px 15px 0;
+      margin-left: -999px;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
 }

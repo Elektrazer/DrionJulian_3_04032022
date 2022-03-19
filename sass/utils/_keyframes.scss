@@ -12,3 +12,19 @@
         transform: translateX(999999px);
     }
   }
+
+  @keyframes slidein {
+    0% {
+        margin-top: 100%;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 0%;
+    }
+  }
+  

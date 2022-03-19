@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 /* Variables */
 /* Alt Pages */
@@ -35,6 +36,32 @@
   100% {
     -webkit-transform: translateX(999999px);
             transform: translateX(999999px);
+  }
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-top: 100%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0%;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-top: 100%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0%;
   }
 }
 
@@ -575,6 +602,10 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 .Foodcontainers .Foodmenu .plats__titre {
@@ -616,6 +647,10 @@ footer a {
           align-items: center;
   background-color: #fff;
   border-radius: 15px;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slide-in;
+          animation-name: slide-in;
 }
 
 .Foodcontainers .Foodmenu .plats__cards .cards__desc {
@@ -641,6 +676,30 @@ footer a {
   margin: 0;
   font-weight: 100;
   font-size: 15px;
+}
+
+.Foodcontainers .Foodmenu .plats__cards .check {
+  background-color: #99E2D0;
+  color: white;
+  width: 80px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 15px 15px 0;
+  margin-left: -999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Foodcontainers .Foodmenu .plats .plats__cards:hover .check {
+  margin-left: 5px;
 }
 
 .Foodcontainers .Foodmenu .button {
