@@ -148,6 +148,20 @@ body {
             height: 80%;
             width: 100%;
 
+            .new {
+                position: absolute;
+                right: 30px;
+                height: 30px;
+                width: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #99E2D0;
+                color: #078C6B;
+                font-weight: bold;
+                font-size: .9em;
+            }
+
             img {
                height: 100%;
                 width: 100%;
@@ -162,8 +176,9 @@ body {
             display: flex;
             a {
                 height: 100%;
-                width: 80%;
+                width: 90%;
                 text-decoration: none;
+
                 .card__text {
                     height: 100%;
                     width: 100%;
@@ -182,12 +197,26 @@ body {
                         margin: 0px;
                         padding: 0px;
                         font-family: Roboto;
-                        font-size: 18px;
+                        font-size: 17px;
                         font-weight: 100;
                         color: #000;
                     }
                 }
             }
+        }
+        .jaime {
+            padding-top: 17px;
+            width: 30px;
+            cursor: pointer;
+
+            i {
+                font-size: 1.3rem;
+            }   
+        }
+        .jaime:hover i {
+           color: $purple;
+           font-weight: bold;
+           transition: all linear .5s;
         }
     }
 }
@@ -231,7 +260,14 @@ footer {
             animation-duration: 1.5s;
 
             .plats__cards:hover .check {
-                margin-left: 5px;
+                margin-right: 0px;
+                transition: margin-right .5s ease-in-out;
+            }
+
+            .plats__cards:hover i {
+                transform: rotate(360deg);
+                transition: transform .5s .1s;
+
             }
         }
         .button {

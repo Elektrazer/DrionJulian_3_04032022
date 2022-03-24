@@ -392,6 +392,26 @@ body {
   width: 100%;
 }
 
+.container .card__header .new {
+  position: absolute;
+  right: 30px;
+  height: 30px;
+  width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #99E2D0;
+  color: #078C6B;
+  font-weight: bold;
+  font-size: .9em;
+}
+
 .container .card__header img {
   height: 100%;
   width: 100%;
@@ -411,7 +431,7 @@ body {
 
 .container .card__body a {
   height: 100%;
-  width: 80%;
+  width: 90%;
   text-decoration: none;
 }
 
@@ -443,9 +463,26 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 100;
   color: #000;
+}
+
+.container .card .jaime {
+  padding-top: 17px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.container .card .jaime i {
+  font-size: 1.3rem;
+}
+
+.container .card .jaime:hover i {
+  color: #9356DC;
+  font-weight: bold;
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
 }
 
 footer {
@@ -473,8 +510,10 @@ footer {
 }
 
 footer .container-title {
-  width: 100%;
-  padding: 5px 0 0 20px;
+  width: 95%;
+  margin-left: 5%;
+  padding-top: 5px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 900px) {
@@ -495,6 +534,7 @@ footer .container-title h3 {
   font-family: 'Shrikhand', sans-serif;
   color: #FFF;
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 footer img {
@@ -633,78 +673,20 @@ footer a {
   text-overflow: ellipsis;
 }
 
-.Foodcontainers .Foodmenu .header_menu__jaime {
-  height: 2rem;
-  width: 2rem;
-  background-color: initial;
-  border: 0 solid transparent;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.Foodcontainers .Foodmenu .header_menu .jaime {
+  width: 30px;
   cursor: pointer;
-  position: relative;
-  background-color: #000;
 }
 
-.Foodcontainers .Foodmenu .header_menu__jaime__jaime:hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+.Foodcontainers .Foodmenu .header_menu .jaime i {
+  font-size: 1.3rem;
 }
 
-.Foodcontainers .Foodmenu .header_menu__jaime__jaime:hover, .Foodcontainers .Foodmenu .header_menu__jaime .empty, .Foodcontainers .Foodmenu .header_menu__jaime .full {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.Foodcontainers .Foodmenu .header_menu__jaime .empty {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #e5e5e5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
-}
-
-.Foodcontainers .Foodmenu .header_menu__jaime .full {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #e5e5e5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+.Foodcontainers .Foodmenu .header_menu .jaime:hover i {
+  color: #9356DC;
+  font-weight: bold;
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
 }
 
 .Foodcontainers .Foodmenu .plats {
@@ -769,6 +751,7 @@ footer a {
           animation-duration: 3s;
   -webkit-animation-name: slide-in;
           animation-name: slide-in;
+  overflow: hidden;
 }
 
 .Foodcontainers .Foodmenu .plats__cards .cards__desc {
@@ -776,12 +759,15 @@ footer a {
   padding: 0px 5%;
   -webkit-transform-origin: left;
           transform-origin: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Foodcontainers .Foodmenu .plats__cards .cards__desc h4 {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
   font-weight: 400;
   font-size: 18px;
@@ -790,10 +776,14 @@ footer a {
 .Foodcontainers .Foodmenu .plats__cards .cards__desc p {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
   font-weight: 100;
   font-size: 15px;
+}
+
+.Foodcontainers .Foodmenu .plats__cards span {
+  margin-right: 20px;
 }
 
 .Foodcontainers .Foodmenu .plats__cards .check {
@@ -811,13 +801,24 @@ footer a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 0 15px 15px 0;
-  margin-left: -9999px;
+  margin-right: -80px;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .Foodcontainers .Foodmenu .plats .plats__cards:hover .check {
-  margin-left: 5px;
+  margin-right: 0px;
+  -webkit-transition: margin-right .5s ease-in-out;
+  transition: margin-right .5s ease-in-out;
+}
+
+.Foodcontainers .Foodmenu .plats .plats__cards:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform .5s .1s;
+  transition: -webkit-transform .5s .1s;
+  transition: transform .5s .1s;
+  transition: transform .5s .1s, -webkit-transform .5s .1s;
 }
 
 .Foodcontainers .Foodmenu .button {
@@ -862,7 +863,7 @@ footer a {
 
 .altfooter .container-title {
   width: 100%;
-  padding: 5px 0 0 20px;
+  padding: 5px 0 0 0px;
 }
 
 .altfooter .container-title h3 {
