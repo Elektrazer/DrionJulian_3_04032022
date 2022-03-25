@@ -6,219 +6,224 @@
 }
 
 @mixin homepage {
-    padding-top: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px black;
+
+  #Logo {
+    height: 15%;
+    width: 50%;
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
-    box-shadow: 0 1px black;
+    align-items: center;
 
-    #Logo {
-        height: 15%;
-        width: 50%;
-        padding-bottom: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        img {
-            height: 100%;
-            width: 100%;
-        }
+    @media screen and (min-width: 900px) {
+      width: 30%;
     }
-    .previous {
-        position: absolute;
-        left: 15px;
-        font-size: 30px;
-        text-decoration: none;
-        color: #000;
-        @media screen and (min-width:900px) {
-          display: none;
-        }
-        i {
-            display: none;
-        }
+    img {
+      height: 100%;
+      width: 100%;
     }
+  }
+  .previous {
+    position: absolute;
+    left: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+    i {
+      display: none;
+    }
+  }
 }
 
 @mixin button {
-    border: 0;
-    padding: 0.75rem 1.5rem;
-    width: fit-content;
-    font-weight: 500;
-    font-size: 1.1rem;
-    border-radius: 100px;
-    margin: 25px auto;
-    color: white;
-    background-color: rgb(104, 104, 104);
-    background-image: linear-gradient($pink, $purple);
-    cursor: pointer;
-    transition-duration: 0.25s;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-  
-    &:hover {
-      background-color: white;
-      box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-    }
-  
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  margin: 25px auto;
+  color: white;
+  background-color: rgb(104, 104, 104);
+  background-image: linear-gradient($pink, $purple);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 @mixin ol {
-    width: 300px;
-    margin: 20px 0px;
-    padding: 6px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
+  width: 300px;
+  margin: 20px 0px;
+  padding: 6px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
 }
 
 @mixin homecard {
-    width: 90%;
-    height: 300px;
-    margin: 15px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    box-shadow: 0px 0px 12px 0px rgba(0,0,0,.5);
+  width: 90%;
+  height: 300px;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
 
-    @media screen and (min-width:900px) {
-      width: 45%;
-      margin-bottom: 20px;
-    }
+  @media screen and (min-width: 900px) {
+    width: 45%;
+    margin-bottom: 20px;
+  }
 }
 
 @mixin footer {
-    width: 100%;
-    background-color: #354146;
-    height: 200px;
-    @media screen and (min-width:900px) {
+  width: 100%;
+  background-color: #354146;
+  height: 200px;
+  @media screen and (min-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container-title {
+    width: 95%;
+    margin-left: 5%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 900px) {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
     }
-    .container-title {
-      width: 95%;
-      margin-left: 5%;
-      padding-top: 5px;
-      margin-bottom: 10px;
-      @media screen and (min-width:900px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      h3 {
-          font-family: 'Shrikhand', sans-serif;
-          color: #FFF;
-          margin-top: 5px;
-          margin-bottom: 0;
-      }
+    h3 {
+      font-family: "Shrikhand", sans-serif;
+      color: #fff;
+      margin-top: 5px;
+      margin-bottom: 0;
     }
-    img {
-      padding-top: 15px;
-      color: white;
+  }
+  img {
+    padding-top: 15px;
+    color: white;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20px;
+    li {
+      padding: 5px;
     }
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding-left: 20px;
-        li {
-            padding: 5px;
-        }
-    }
-    a {
-        text-decoration: none;
-        color: white;
-    }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
-  /* Alt Pages */
+/* Alt Pages */
 @mixin altheader {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 1px black;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px black;
 
-    #Logo {
-      height: 15%;
-      width: 50%;
-      padding-bottom: 5px;
-        
-        
-      img {
+  #Logo {
+    height: 15%;
+    width: 50%;
+    padding-bottom: 5px;
+    @media screen and (min-width: 900px) {
+      width: 30%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .previous {
+      position: absolute;
+      left: 15px;
+      font-size: 30px;
+      text-decoration: none;
+      color: #000;
+      i {
         height: 100%;
-        width: 100%;
-      }
-
-      .previous {
-        position: absolute;
-        left: 15px;
-        font-size: 30px;
-        text-decoration: none;
-        color: #000;
-        i {
-          height: 100%;
-          display: block;
-        }
+        display: block;
       }
     }
+  }
 }
 
 @mixin Foodmenu {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 15px 15px 0% 15px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 150px;
-    background-color: #e5e5e5;
-    border-radius: 15px 15px 0px 0px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 15px 15px 0% 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 150px;
+  background-color: #e5e5e5;
+  border-radius: 15px 15px 0px 0px;
 }
 
 @mixin headermenu {
-    height: 50px;
-    width: 100%;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    height: 100%;
+    width: 80%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-
-    &__title {
-      height: 100%;
-      width: 80%;
-      display: flex;
-      align-items: center;
-      h2 {
-        font-family: Shrikhand;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+    h2 {
+      font-family: Shrikhand;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-
-    .jaime {
-      width: 30px;
-      cursor: pointer;
-
-        i {
-          font-size: 1.3rem;
-        }   
-    }
-    .jaime:hover i {
-      color: $purple;
-      font-weight: bold;
-      transition: all linear .5s;
-      }
   }
+
+  .jaime {
+    width: 30px;
+    cursor: pointer;
+
+    i {
+      font-size: 1.3rem;
+    }
+  }
+  .jaime:hover i {
+    color: $purple;
+    font-weight: bold;
+    transition: all linear 0.5s;
+  }
+}
 
 @mixin plats {
   height: fit-content;
@@ -282,9 +287,12 @@
     }
     span {
       margin-right: 20px;
+      @media screen and (min-width: 470px) {
+        margin-right: 100px;
+      }
     }
     .check {
-      background-color: #99E2D0;
+      background-color: #99e2d0;
       color: white;
       width: 80px;
       height: 100%;
@@ -295,7 +303,6 @@
       margin-right: -80px;
       overflow: hidden;
       white-space: nowrap;
-
     }
   }
 }
@@ -310,8 +317,8 @@
     width: 100%;
     padding: 5px 0 0 0px;
     h3 {
-        font-family: 'Shrikhand', sans-serif;
-        color: #FFF;
+      font-family: "Shrikhand", sans-serif;
+      color: #fff;
     }
   }
   img {
@@ -319,15 +326,15 @@
     color: white;
   }
   ul {
-      list-style-type: none;
-      margin: 0;
-      padding-left: 20px;
-      li {
-          padding: 5px;
-      }
+    list-style-type: none;
+    margin: 0;
+    padding-left: 20px;
+    li {
+      padding: 5px;
+    }
   }
   a {
-      text-decoration: none;
-      color: white;
+    text-decoration: none;
+    color: white;
   }
 }

@@ -66,7 +66,7 @@
 }
 
 html {
-  font-family: 'Roboto' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Roboto", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
@@ -110,11 +110,11 @@ body {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #9356DC;
+  border: 8px solid #9356dc;
   border-radius: 50%;
   -webkit-animation: loadingspin 1.2s cubic-bezier(0.5, 0, 0.5, 1);
           animation: loadingspin 1.2s cubic-bezier(0.5, 0, 0.5, 1);
-  border-color: #9356DC transparent transparent transparent;
+  border-color: #9356dc transparent transparent transparent;
 }
 
 .loadingspin div:nth-child(1) {
@@ -157,6 +157,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .headerhome #Logo {
+    width: 30%;
+  }
 }
 
 .headerhome #Logo img {
@@ -216,7 +222,7 @@ body {
 .topsection--description .description__title {
   margin: 0;
   font-size: 1.5rem;
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 .topsection--description .description__subtitle {
@@ -290,7 +296,15 @@ body {
 @media screen and (min-width: 900px) {
   .containerlist__title {
     width: 100%;
-    margin-left: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -328,7 +342,7 @@ body {
           justify-content: center;
   border-radius: 50%;
   background-color: #9356dc;
-  color: #FFF;
+  color: #fff;
 }
 
 .containerlist__ol i {
@@ -390,6 +404,7 @@ body {
 .container .card__header {
   height: 80%;
   width: 100%;
+  position: relative;
 }
 
 .container .card__header .new {
@@ -406,10 +421,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
-  color: #078C6B;
+  background-color: #99e2d0;
+  color: #078c6b;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .container .card__header img {
@@ -481,8 +496,8 @@ body {
 .container .card .jaime:hover i {
   color: #9356DC;
   font-weight: bold;
-  -webkit-transition: all linear .5s;
-  transition: all linear .5s;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
 }
 
 footer {
@@ -531,8 +546,8 @@ footer .container-title {
 }
 
 footer .container-title h3 {
-  font-family: 'Shrikhand', sans-serif;
-  color: #FFF;
+  font-family: "Shrikhand", sans-serif;
+  color: #fff;
   margin-top: 5px;
   margin-bottom: 0;
 }
@@ -574,6 +589,12 @@ footer a {
   height: 15%;
   width: 50%;
   padding-bottom: 5px;
+}
+
+@media screen and (min-width: 900px) {
+  .headeralt #Logo {
+    width: 30%;
+  }
 }
 
 .headeralt #Logo img {
@@ -685,8 +706,8 @@ footer a {
 .Foodcontainers .Foodmenu .header_menu .jaime:hover i {
   color: #9356DC;
   font-weight: bold;
-  -webkit-transition: all linear .5s;
-  transition: all linear .5s;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
 }
 
 .Foodcontainers .Foodmenu .plats {
@@ -786,8 +807,14 @@ footer a {
   margin-right: 20px;
 }
 
+@media screen and (min-width: 470px) {
+  .Foodcontainers .Foodmenu .plats__cards span {
+    margin-right: 100px;
+  }
+}
+
 .Foodcontainers .Foodmenu .plats__cards .check {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: white;
   width: 80px;
   height: 100%;
@@ -808,17 +835,17 @@ footer a {
 
 .Foodcontainers .Foodmenu .plats .plats__cards:hover .check {
   margin-right: 0px;
-  -webkit-transition: margin-right .5s ease-in-out;
-  transition: margin-right .5s ease-in-out;
+  -webkit-transition: margin-right 0.5s ease-in-out;
+  transition: margin-right 0.5s ease-in-out;
 }
 
 .Foodcontainers .Foodmenu .plats .plats__cards:hover i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: -webkit-transform .5s .1s;
-  transition: -webkit-transform .5s .1s;
-  transition: transform .5s .1s;
-  transition: transform .5s .1s, -webkit-transform .5s .1s;
+  -webkit-transition: -webkit-transform 0.5s 0.1s;
+  transition: -webkit-transform 0.5s 0.1s;
+  transition: transform 0.5s 0.1s;
+  transition: transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
 }
 
 .Foodcontainers .Foodmenu .button {
@@ -867,8 +894,8 @@ footer a {
 }
 
 .altfooter .container-title h3 {
-  font-family: 'Shrikhand', sans-serif;
-  color: #FFF;
+  font-family: "Shrikhand", sans-serif;
+  color: #fff;
 }
 
 .altfooter img {
@@ -892,21 +919,4 @@ footer a {
 }
 
 /* Responsive */
-@media screen and (min-width: 900px) {
-  .container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .container__title {
-    width: 100%;
-    margin-left: 30px;
-  }
-}
 /*# sourceMappingURL=main.css.map */
